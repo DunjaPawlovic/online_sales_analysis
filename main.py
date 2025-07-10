@@ -11,3 +11,15 @@ print("Lista proizvoda:")
 manager.display_products()
 
 print(f"\nUkupna vrednost inventara: {manager.total_inventory_value()} dinara")
+
+from cart import Cart
+
+cart = Cart()
+
+cart.add_to_cart(manager.products[0])  
+cart.add_to_cart(manager.products[1])  
+cart.add_to_cart(manager.products[2])  
+
+print("\n--- Korpa kupca ---")
+cart.display_cart()
+print(f"Ukupna vrednost za naplatu: {cart.total_cart_value()} dinara")
